@@ -1,0 +1,392 @@
+#root {
+  height: 90%;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(50px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navBar {
+  overflow: hidden;
+  border-radius: 0.2em;
+  position: relative;
+  height: 10%;
+  width: 100%;
+  z-index: 10;
+  background-color: #00ffc4;
+  box-shadow: 0em 1.3em 1.1em rgba(0, 0, 0, 0.25);
+}
+
+.navLogo {
+  vertical-align: middle;
+  padding: 0.5em;
+  padding-left: 5%;
+  float: left;
+  display: relative;
+  width: auto;
+  max-width: 12%;
+}
+
+.aboutBtn {
+  border: solid 3px;
+  margin: 0.5em;
+
+  margin-right: 3em;
+  float: right;
+  position: relative;
+  width: 5em;
+  height: 2em;
+  max-width: 8%;
+  box-shadow: 4px 6px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.backgroundImg {
+  overflow: hidden;
+  height: 20rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.cloud-one {
+  position: fixed;
+  left: 0;
+  z-index: -100;
+  margin-top: -4em;
+  margin-left: -3em;
+  float: left;
+  width: 20em;
+}
+
+.cloud-two {
+  margin-top: -9em;
+  margin-right: -7em;
+  float: right;
+  width: 25em;
+}
+
+.landingPage {
+  overflow: hidden;
+}
+
+.landingQuote {
+  font-family: 'Gloria Hallelujah';
+  font-size: 1.2em;
+  font-style: bold;
+}
+
+.quoteBox {
+  margin-top: 1.5em;
+  overflow: hidden;
+  position: relative;
+  float: right;
+  margin-right: 8em;
+  width: fit-content;
+}
+
+.headBox {
+  margin-top: 2em;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.landingHeader {
+  width: 20em;
+  font-size: xx-large;
+  font-family: 'Nunito';
+}
+
+.landingHeader2 {
+  width: 20em;
+  font-size: x-large;
+  font-family: 'Nunito';
+}
+
+.hlWord {
+  background: black;
+  color: white;
+  margin: 0.1em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.signUpBtn {
+  margin-right: 1em;
+  outline: none !important;
+  font-family: 'Nunito';
+  font-size: larger;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #b6ffee 100%),
+    #00ffc4;
+  border-radius: 50px;
+}
+
+.logInBtn {
+  margin-left: 1em;
+  outline: none !important;
+  font-family: 'Nunito';
+  font-size: larger;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  padding: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, black 100%),
+    #101;
+  border-radius: 50px;
+}
+
+.letsGobtn {
+  outline: none !important;
+  font-family: 'Nunito';
+  font-size: larger;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #b6ffee 100%),
+    #00ffc4;
+  border-radius: 50px;
+}
+
+.sessionleftPane {
+  padding-top: 1em;
+  position: relative;
+  align-items: stretch;
+  width: fit-content;
+  margin: 0.2em;
+  min-width: 20%;
+  height: 100%;
+  border: solid 0.3em #00ffc4;
+}
+
+.onlineList {
+  margin-top: 1em;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  height: max-content;
+  align-items: stretch;
+  border: solid 0.3em #00ffc4;
+}
+
+.onlineDot {
+  height: 10px;
+  width: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.user-entry {
+  position: absolute;
+  z-index: 1000;
+  padding: 0.8em;
+  border: 1px solid black;
+}
+
+.row-v {
+  margin-top: 0.5em;
+  padding: 0.3em;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-bottom: auto;
+  align-items: stretch;
+}
+
+.column {
+  z-index: -10;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.remote-container {
+  background: black;
+  height: 70%;
+}
+.local-container {
+  height: 30%;
+}
+
+.herbstable {
+  background-image: url('./img/herbs.svg');
+  background-repeat: repeat-x;
+  height: 20%;
+  width: 100%;
+  background-size: 20% 100%;
+  position: absolute;
+  z-index: -10;
+  bottom: 0;
+}
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: white;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #00ffc4;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  z-index: 100;
+  padding: 2em;
+  border-radius: 5em;
+  margin-top: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 6px 9px 1.5px 1.5px rgba(0, 0, 0, 0.25);
+}
+
+.right :hover {
+  box-shadow: 6px 9px 1.5px 1.5px rgba(0, 0, 0, 0.25);
+}
+
+.left :hover {
+  box-shadow: 6px 9px 1.5px 1.5px rgba(0, 0, 0, 0.25);
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* switch animations */
+.fade-in-to-top {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(50em);
+    transform: translateY(50em);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0em);
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(50em);
+    transform: translateY(50em);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0em);
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+/* Optimization for bigger screens */
+@media screen and (min-width: 1420px) {
+  .pruple-tint {
+    font-size: 1.5rem;
+  }
+  .logo {
+    max-width: 15.2rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .pruple-tint {
+    font-size: 1.3rem;
+  }
+  .logo {
+    max-width: 15.25rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .pruple-tint {
+    font-size: 1.6rem;
+  }
+  .logo {
+    max-width: 15.3rem;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .pruple-tint {
+    font-size: 2rem;
+  }
+  .logo {
+    max-width: 15.35rem;
+  }
+}
+
+@media screen and (min-width: 2700px) {
+  .pruple-tint {
+    font-size: 2.5rem;
+  }
+  .logo {
+    max-width: 15.35rem;
+  }
+}

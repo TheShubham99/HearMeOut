@@ -1,0 +1,49 @@
+[
+  {
+    "apihost": "https://apigcp.nimbella.io",
+    "namespace": "ssahasra-rou5e5ge1fw",
+    "packageVersions": {},
+    "actionVersions": {
+      "hello": {
+        "version": "0.0.8",
+        "digest": "b29752b33a519808ad7e4399ecea0cffb134b78f0467ef382ffd7790de6569e3"
+      }
+    },
+    "webHashes": {
+      "web\\.env": "77f917aad3b1c1e3e53a229aaa7471e2e7a83f48e2b6fd37f161dfc4eafd271e",
+      "web\\asset-manifest.json": "14b2c64187094c73c559e4689f5b15cc70e587682ab0ff042c9e807d4387d8ef",
+      "web\\favicon.png": "f02993d0b0fe49fcf9f86203a4a1da4d57bd44429f006f332220f1c05a1c323b",
+      "web\\index.html": "36b47c62108b590f660306d570d3d273c523319355ffe4052bca6b9d65632386",
+      "web\\logo128.png": "f02993d0b0fe49fcf9f86203a4a1da4d57bd44429f006f332220f1c05a1c323b",
+      "web\\logo512.png": "f02993d0b0fe49fcf9f86203a4a1da4d57bd44429f006f332220f1c05a1c323b",
+      "web\\manifest.json": "50b3d8c3903af3f78d871b94557ab14f4e39ca192eaca3d2cfa863c867279a14",
+      "web\\precache-manifest.8b5ce4336840fc72fe33dc7b6217296d.js": "34c48d44dc387005ac82b4593dfecdbae7fb16e2d536ec1db66af769f5c9f08a",
+      "web\\precache-manifest.a16fbf1a63ce9bf7918f0500a5b96f4d.js": "eece1c0408ac33ae319dbe12ee1fef755f152a4726e7b1bd063716ffbbb40529",
+      "web\\robots.txt": "90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2",
+      "web\\service-worker.js": "48cb7b1427e2f86ae99eec2f95e99111ec5b2b80615c68d6843cce7194d76c39",
+      "web\\static\\media\\cloud.d8f66a15.png": "92ebbeb22198f4bac985b548a93d3d606aa3e38d7146d204b7732a6ede71e750",
+      "web\\static\\media\\super-young.553116cb.png": "de07e69d31c711df554cb530c2d77ae764f0bca769d57019f8ae44a5bb0b45ea",
+      "web\\static\\media\\vector-background.01b87525.jpg": "28a5f7cf8c6f08f1a9186b9dc1e8314792e772b41422c4c09456a98e21935777",
+      "web\\static\\media\\vector-background.f84b6009.jpg": "74177f20ceabebd1c7c2c86b75525a8dfdcd002a2e7b7d1763d56085acb76ee1",
+      "web\\static\\media\\young.17f3138c.png": "31cdb1093cbd3a6330e334e62059c29deb18c0a835914622cee2614a706b274f",
+      "web\\static\\js\\2.23fb3f3e.chunk.js": "4a6ed4c94300d4c7b171c59172bdd153b1dc9f115f3b32020521b214bdd0a11a",
+      "web\\static\\js\\2.23fb3f3e.chunk.js.LICENSE.txt": "5f2d977694de0a3aee590e374e8e2ee6438e51f64de0b29231227afafc584fc3",
+      "web\\static\\js\\2.23fb3f3e.chunk.js.map": "7ef53f1d29557e5d07ede9ba5d8ba570dce5662764bbfa69d22fba2122932f6f",
+      "web\\static\\js\\2.d1ec39d9.chunk.js": "ef99a4110b40ed212208cbdb80d2c205f69662cd4a294eaf64df382ec3eea620",
+      "web\\static\\js\\2.d1ec39d9.chunk.js.LICENSE.txt": "46f37d637c7c42ea6193c9f4b4cefe11af24e1280cc381602fbf1219e60ed038",
+      "web\\static\\js\\2.d1ec39d9.chunk.js.map": "4fa9bbc3dd96bd424397dcb0e6a3e755e5bff38bd08fa9948d1a9e9550165717",
+      "web\\static\\js\\main.42d57b62.chunk.js": "28461ebba28d55c923b5c2ed53953b0f7646b3d974b606ec5b986dff3f6fe8db",
+      "web\\static\\js\\main.42d57b62.chunk.js.map": "d1c5e3da1605da692a567d4019ff580e2ae81504ddf96cb6ee5b4b4fe7210602",
+      "web\\static\\js\\main.7ddd6344.chunk.js": "fcea24720d4e766859db7143a372b8f4fe680d37695f4133752081f2c5ca702a",
+      "web\\static\\js\\main.7ddd6344.chunk.js.map": "ee3f1c468d95b6b7a08cd1a5fc062e8666d19a69af7a5eec074c0f0563160f70",
+      "web\\static\\js\\runtime-main.947f9a32.js": "04b2062b4408c8a9f3dc05392cae44cbe885044d4a1a9329c650c6bf98993e6c",
+      "web\\static\\js\\runtime-main.947f9a32.js.map": "93c1b935f163ecab9c7cae1b22b7bc819e0efd55bcc6d5c4110f1c1d0f313731",
+      "web\\static\\css\\2.3cf5d70f.chunk.css": "6a77889c896d896ec757bf4f9a14ead8e0f0a41ddb63742eb24c4c51a0e4055f",
+      "web\\static\\css\\2.3cf5d70f.chunk.css.map": "72283a588be61c4dcd7e42003462f1813755abbbd1ff4e82150d2f44d412fda8",
+      "web\\static\\css\\main.43c71381.chunk.css": "de2044fe4263814439b123422507d2a153eb3b85bd7c22d56b512af8931e13a5",
+      "web\\static\\css\\main.43c71381.chunk.css.map": "8714de4ffdf767b1d7ee57a7e665d64fb7a9167cf91aae05dda41165d98fa531",
+      "web\\static\\css\\main.5ba7089c.chunk.css": "d57534bcf8c512517667d345cbcd049d56bd88217b89b572b30ee6b62368a453",
+      "web\\static\\css\\main.5ba7089c.chunk.css.map": "64a1776f72d35181fbac166433e30aea654ce7ad64dd60e1989b94821248bb64"
+    }
+  }
+]
