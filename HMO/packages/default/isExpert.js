@@ -2,15 +2,24 @@ const nimbella = require('nim')
 let redis=nimbella.redis()
 
 
-function main(args) {
+async function  main(args) {
     let expertName = args.name || '';
     
-    let status="Set";
+    let status="None";
     
+
     if(expertName!==''){
-      status = await redis.getAsync(expertName) 
+      try{
+      status = await redis.getAsync(expertName)
+      }catch{
+        return {body:"Nah"}
+      }
     }    
 
+    if(status!=="Expert"){
+      return { body: "None" };
+
+    }
     return { body: status };
 
   }
