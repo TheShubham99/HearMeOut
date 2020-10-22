@@ -7,7 +7,7 @@ function main(args) {
     
     let status="Done"
     if(expertName!==''){
-    await redis.setAsync(expertName,"Expert");
+    let a = await redis.setAsync(expertName,"Expert");
     }    
 
     return { body: status};
