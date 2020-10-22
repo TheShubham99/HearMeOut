@@ -154,6 +154,7 @@ var connectedSession = null;
     
     ua.register(registerInformation).then(function (session) {
         // Save session    
+         connectedSession = session;
         
         connectedSession
             //==============================
@@ -184,7 +185,7 @@ var connectedSession = null;
                 });
 
                 fetch(APIuri+'addExpert?'+new URLSearchParams({
-                    name:connectedSession.id
+                    name:connectedSession.id.toString()
                 }))
 
 

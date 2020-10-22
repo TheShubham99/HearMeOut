@@ -1,5 +1,6 @@
 'use strict';
 
+const APIuri = '/api/default/'
 
 function updateAddressBook() {
     console.log("updateAddressBook");
@@ -19,7 +20,8 @@ $("#userlist").html=""
         console.log("userId :", user.getId());
         //Checking if connectedUser is not current user befire adding in addressBook list
         if (user.getId() !== apiRTC.session.apiCCId) {
-            $("#userlist").append('<button class="user-entry" href="#" onclick="callVideoHelper(' + user.getId() + ')">' + 'Anonymous' + '</button>');
+            $("#userlist").append(`<div class="user-entry"><img src="./static/media/placeholder.890129a1.png" class="placeholder"> Anonymous<br></img><center><button class="btn-success" href="#" onclick="callVideoHelper(` + user.getId() + `)">` + `Connect </button></center></div>`);
+            
         }
     }
 }
@@ -209,7 +211,6 @@ var connectedSession = null;
                         addHangupButton(call.getId());
                     });
                 }
-    
             
             });
     }).catch(function (error) {

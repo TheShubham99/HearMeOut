@@ -217,9 +217,18 @@ body {
 
 .user-entry {
   position: absolute;
+  width: 100%;
   z-index: 1000;
   padding: 0.8em;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 1em;
+}
+
+.placeholder {
+  height: 25%;
+  width: 25%;
+
+  position: relative;
 }
 
 .row-v {
