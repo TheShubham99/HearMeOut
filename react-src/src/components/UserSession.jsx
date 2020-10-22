@@ -11,14 +11,14 @@ export default function UserSession() {
    {/*    <div dangerouslySetInnerHTML={{__html:`<button id='this'>Please</button>`}}></div>   */}
       <div className='row-v'>
         <div className={'column'}>
-
+          <div className='remote-container'>
           <video id='remote-container-user' className='remote-container'>
            
           </video>
+          </div>
           <div  className='local-container'>
           <div style={{display:'flex',flexDirection:'row',height:'100%'}}>
           <video  id='local-container-user' style={{width:'20em',height:'100%', border:'0.2em solid lightgreen'}}> </video>
-{/*           <p style={{fontFamily:'Nunito',fontSize:'1.5rem',width:'100%',color:'green',textAlign:'center'}}></p> */}
           </div>
           <div className={'herbstable'}></div>
           </div>

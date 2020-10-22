@@ -1,5 +1,7 @@
 'use strict';
 
+const APIuri = '/api/default/'
+
 function addStreamInDiv(stream, divId, mediaEltId, muted) {
     
     var streamIsVideo = stream.hasVideo();
@@ -20,7 +22,7 @@ function addStreamInDiv(stream, divId, mediaEltId, muted) {
     mediaElt.autoplay = true;
     mediaElt.muted = muted;
     mediaElt.style.width='100%'
-    mediaElt.style.height='70%'
+    mediaElt.style.height='100%'
 
     funcFixIoS = function () {
         var promise = mediaElt.play();
@@ -107,8 +109,7 @@ function setCallListeners(call) {
             stream
                 .on("stopped", function () { //When client receives an screenSharing call from another user
                     console.error("Stream stopped");
-                    $('#hangup-expert').style.display='none';
-                });
+                                    });
         })
         .on("streamAdded", function (stream) {
             console.log('stream :', stream);
@@ -135,7 +136,7 @@ function setCallListeners(call) {
 
 
 
-apiRTC.setLogLevel(10);
+apiRTC.setLogLevel(0);
 
 var connectedSession = null;
 
@@ -149,21 +150,12 @@ var connectedSession = null;
     //==============================
     // REGISTER
     //==============================
-    
     var registerInformation = {};
     
     ua.register(registerInformation).then(function (session) {
-        // Save session
-        connectedSession = session;
-    
-        // Display user number
-//        document.getElementById('my-number').innerHTML = 'Your number is ' + connectedSession.id;
-    
+        // Save session    
+        
         connectedSession
-           // .on("contactListUpdate", function (updatedContacts) { //display a list of connected users
-           //     console.log("MAIN - contactListUpdate", updatedContacts);
-           //     updateAddressBook();
-           // })
             //==============================
             // WHEN A CONTACT CALLS ME
             //==============================
@@ -190,6 +182,11 @@ var connectedSession = null;
                 }
     
                 });
+
+                fetch(APIuri+'addExpert?'+new URLSearchParams({
+                    name:connectedSession.id
+                }))
+
 
     }).catch(function (error) {
         // error

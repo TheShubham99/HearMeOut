@@ -44,7 +44,7 @@ function addStreamInDiv(stream, divId, mediaEltId,  muted) {
     mediaElt.autoplay = true;
     mediaElt.muted = muted;
     mediaElt.style.width='100%'
-    mediaElt.style.height='70%'
+    mediaElt.style.height='100%'
 
     funcFixIoS = function () {
         var promise = mediaElt.play();
@@ -156,10 +156,7 @@ function setCallListeners(call) {
         });
 }
 
-
-
-
-apiRTC.setLogLevel(10);
+apiRTC.setLogLevel(0);
 
 var connectedSession = null;
 

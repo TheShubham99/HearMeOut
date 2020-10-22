@@ -1,13 +1,14 @@
-import React, { useCallback,useState } from 'react';
+import React, { useCallback,useState,useEffect } from 'react';
 import app from '../../base';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import useScript from '../util/useScript';
 
 export default function ExpertSession({ history }) {
+  
   const logOut = useCallback(async () => {
     try {
       await app.auth().signOut();
-      history.push('/');
+           history.push('/');
     } catch (error) {
       alert(error.message);
     }
@@ -18,25 +19,27 @@ export default function ExpertSession({ history }) {
 
   useScript("./expert.js");
   return (
-    
+
      <div style={{ height: '100%' }}>
-   {/*    <div dangerouslySetInnerHTML={{__html:`<button id='this'>Please</button>`}}></div>   */}
       <div className='row-v'>
         <div className={'column'}>
-
+        <div className='remote-container'>
           <video id='remote-container-expert' className='remote-container'></video>
+          </div>
+
           <div  className='local-container'>
+
           <div style={{display:'flex',flexDirection:'row',height:'100%'}}>
           <video  id='local-container-expert' style={{width:'20em',height:'100%', border:'0.2em solid lightgreen'}}> </video>
-{/*           <p style={{fontFamily:'Nunito',fontSize:'1.5rem',width:'100%',color:'green',textAlign:'center'}}></p> */}
           </div>
+
           <div className={'herbstable'}></div>
           </div>
         </div>
         
         <div className={'sessionleftPane'}>
           <center>
-            <label>Smiles :)</label>
+        <label>Smiles :)</label>
             <ProgressBar animated striped variant="success" now={smiles+5} 
             style={{backgroundColor:'lightgrey', margin:'1em'}}
             label={smiles}
@@ -71,5 +74,6 @@ export default function ExpertSession({ history }) {
         </div>
       </div>
     </div>
+   
   );
 }
