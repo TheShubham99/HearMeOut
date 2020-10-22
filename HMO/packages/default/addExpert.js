@@ -5,9 +5,9 @@ let redis=nimbella.redis()
 function main(args) {
     let expertName = args.name || '';
     
-    let status="ff"
+    let status="Done"
     if(expertName!==''){
-    redis.setAsync(expertName,JSON.stringify({expertName}));
+    await redis.setAsync(expertName,"Expert");
     }    
 
     return { body: status};
