@@ -21,13 +21,13 @@
 
 <h2 align="center" id="about">About The Project</h2>
 
-Hear Me Out is a platform where you can share your thoughts with experts. We choose our experts carefully. The Experts are some really kind hearted people who are there to listen your stories without any judgements. Every expert posses a common quality and that is they are **Good Listener**.
+Hear Me Out is a platform where you can share your thoughts with experts. We choose our experts carefully. The Experts are some really kind-hearted people who are there to listen to your stories without any judgments. Every expert posses a common quality and that is they are **Good Listener**.
 
 ---
 
 <h3 align="center" >Aim</h3>
 
-The HMO platform is made for people to talk out the experiences, thoughts and everything they wish to share anonymously with someone who will not judge them in any aspect. The platform connects you with some verified experts who will listen to your thoughts and express his/her opinion. The expert may not give you a proper solution for your problem as this is not a consultation platform, but he/she will be there for you to listen to your problems and share his/her thoughts.
+The HMO platform is made for people to talk out the experiences, thoughts, and everything they wish to share anonymously with someone who will not judge them in any aspect. The platform connects you with some verified experts who will listen to your thoughts and express his/her opinion. The expert may not give you a proper solution for your problem as this is not a consultation platform, but he/she will be there for you to listen to your problems and share his/her thoughts.
 
 > "Sometimes we don't need a solution but we need someone to hear us out."
 
@@ -37,7 +37,7 @@ This is where **'Hear Us Out'** will help you.
 
 <h3 align="center" >For Whom?</h3>
 
-The HMO platform will connect you with someone according to your age group (Minimum Age - 16). The audiance is divided in two categories.
+The HMO platform will connect you with someone according to your age group (Minimum Age - 16). The audience is divided into two categories.
 
 1. Young - Age Group (16 to 54)
 2. Super Young - Age Group (55 +)
