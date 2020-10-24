@@ -2,46 +2,7 @@
 
 const APIuri = '/api/default/'
 
-async function updateAddressBook() {
-    console.log("updateAddressBook");
-
-    //var contactListArray = connectedSession.getContactsArray(),
-    var contactListArray = connectedSession.getOnlineContactsArray(), //Get online contacts
-        i = 0;
-
-    console.log("contactListArray :", contactListArray);
-
-    //Cleaning addressBook list
-//        $("#addressBookDropDown").empty();
-$("#userlist").html=""
-
-    var isExpert=false;
-
-    for (i = 0; i < contactListArray.length; i += 1) {
-        var user = contactListArray[i];
-        console.log("userId :", user.getId());
-        //Checking if connectedUser is not current user befire adding in addressBook list
-        
-        
-        if (user.getId() !== apiRTC.session.apiCCId) {
-
-           await fetch(APIuri+`isExpert.json?name="`+user.getId().toString()+`"`)
-            .then((message)=>{
-                message.json()
-                .then((expert)=>{
-                    isExpert=expert["body"]; 
-                    
-                    if(isExpert){
-                        $("#userlist").append(`<div class="user-entry"><img class="placeholder"> Expert<br></img><center><button class="btn-success" href="#" onclick="callVideoHelper(` + user.getId() + `)">` + `Connect </button></center></div>`);
-                      }
-             }).catch((err)=>{console.error("Failed to load online users :(")})   
-            })
-             .catch((err)=>{console.error("Failed to load online users :(")})            
-        }
-    }
-}
-
-function addStreamInDiv(stream, divId, mediaEltId,  muted) {
+function addStreamInDiv(stream, divId, mediaEltId, muted) {
     
     var streamIsVideo = stream.hasVideo();
     console.error('addStreamInDiv - hasVideo? ' + streamIsVideo);
@@ -54,7 +15,7 @@ function addStreamInDiv(stream, divId, mediaEltId,  muted) {
     if (streamIsVideo === 'false') {
         mediaElt = document.createElement("audio");
     } else {
-        mediaElt=document.getElementById(divId)
+        mediaElt = document.getElementById(divId);
     }
 
     mediaElt.id = mediaEltId;
@@ -85,8 +46,8 @@ function addStreamInDiv(stream, divId, mediaEltId,  muted) {
 
     stream.attachToElement(mediaElt);
 
- //   divElement = document.getElementById(divId);
- //   divElement.appendChild(mediaElt);
+//    divElement = document.getElementById(divId);
+//    divElement.appendChild(mediaElt);
     promise = mediaElt.play();
 
     if (promise !== undefined) {
@@ -131,29 +92,28 @@ function callVideoHelper(uid) {
 }
 
 function addHangupButton(callId) {
-    // Display hangup button
-    document.getElementById('hangup-user').style.display = 'block';
-    $("#hangup-user").attr("onclick",'hangupCall(' + callId + ')');
+     // Display hangup button
+     document.getElementById('hangup-expert').style.display = 'block';
+       
+    $("#hangup-expert").attr("onclick","hangupCall("+ callId + ")");
 
     //$("#hangupButtons").append('<input id="hangup-' + callId + '" class="btn btn-danger" type="button" value="Hangup-' + callId + '" onclick="hangupCall(' + callId + ')" />');
 }
-
 
 function setCallListeners(call) {
     call
         .on("localStreamAvailable", function (stream) {
             console.log('localStreamAvailable');
             //document.getElementById('local-media').remove();
-            addStreamInDiv(stream, 'local-container-user', 'local-media-' + stream.getId(), true);
+            addStreamInDiv(stream, 'local-container-expert', 'local-media-' + stream.getId(), true);
             stream
                 .on("stopped", function () { //When client receives an screenSharing call from another user
                     console.error("Stream stopped");
-                    $('#local-media-' + stream.getId()).remove();
-                });
+                                    });
         })
         .on("streamAdded", function (stream) {
             console.log('stream :', stream);
-            addStreamInDiv(stream, 'remote-container-user', 'remote-media-' + stream.getId(), false);
+            addStreamInDiv(stream, 'remote-container-expert', 'remote-media-' + stream.getId(), false);
         })
         .on('streamRemoved', function (stream) {
             // Remove media element
@@ -165,13 +125,16 @@ function setCallListeners(call) {
 
             //Checking if tryAudioCallActivated
             if (e.tryAudioCallActivated === false) {
-                $('#hangup-user').style.display='none';
-                        }
+                $('#hangup-expert').style.display='none';
+            }
         })
-         .on('hangup', function () {
-            $('#hangup-user').style.display='none';
+        .on('hangup', function () {
+            $('#hangup-' + call.getId()).remove();
         });
 }
+
+
+
 
 apiRTC.setLogLevel(0);
 
@@ -187,21 +150,13 @@ var connectedSession = null;
     //==============================
     // REGISTER
     //==============================
-    
     var registerInformation = {};
     
     ua.register(registerInformation).then(function (session) {
-        // Save session
-        connectedSession = session;
-    
-        // Display user number
-//        document.getElementById('my-number').innerHTML = 'Your number is ' + connectedSession.id;
-    
+        // Save session    
+         connectedSession = session;
+        
         connectedSession
-            .on("contactListUpdate", function (updatedContacts) { //display a list of connected users
-                console.log("MAIN - contactListUpdate", updatedContacts);
-                updateAddressBook();
-            })
             //==============================
             // WHEN A CONTACT CALLS ME
             //==============================
@@ -226,8 +181,14 @@ var connectedSession = null;
                         addHangupButton(call.getId());
                     });
                 }
-            
-            });
+    
+                });
+
+                fetch(APIuri+'addExpert?'+new URLSearchParams({
+                    name:connectedSession.id.toString()
+                }))
+
+
     }).catch(function (error) {
         // error
         console.error('User agent registration failed', error);

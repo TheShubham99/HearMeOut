@@ -7,20 +7,21 @@ async function  main(args) {
     
     let status="None";
     
-
     if(expertName!==''){
       try{
       status = await redis.getAsync(expertName)
       }catch{
-        return {body:"Nah"}
+        return {body:false}
       }
     }    
 
     if(status!=="Expert"){
-      return { body: "None" };
+      return { body: false };
 
     }
-    return { body: status };
+    else{
+    return { body: true };
+    }
 
   }
   

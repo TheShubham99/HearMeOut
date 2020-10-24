@@ -5,11 +5,12 @@ let redis=nimbella.redis()
 async function main(args) {
     let expertName = args.name || '';
     
-    let status=""
+    let status;
     if(expertName!==''){
-    status = await redis.setAsync(expertName,"Expert");
+    status = await redis.setAsync(`"`+expertName.toString()+`"`,"Expert");
+    await redis.expireAsync(`"`+expertName.toString()+`"`, 600)
     }    
 
-    return { body: status};
+    return { body: "Success"};
   }
   

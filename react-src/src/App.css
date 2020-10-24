@@ -227,7 +227,7 @@ body {
 .placeholder {
   height: 25%;
   width: 25%;
-
+  content: url('./img/placeholder.png');
   position: relative;
 }
 
