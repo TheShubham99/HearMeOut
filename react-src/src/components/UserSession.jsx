@@ -7,8 +7,7 @@ export default function UserSession() {
   useScript("./user.js");
   return (
     
-     <div style={{ height: '100%' }}>
-   {/*    <div dangerouslySetInnerHTML={{__html:`<button id='this'>Please</button>`}}></div>   */}
+     <div style={{ height: '100%',overflow:'hidden' }}>
       <div className='row-v'>
         <div className={'column'}>
           <div className='remote-container'>

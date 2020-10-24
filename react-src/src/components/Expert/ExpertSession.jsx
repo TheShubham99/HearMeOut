@@ -20,7 +20,7 @@ export default function ExpertSession({ history }) {
   useScript("./expert.js");
   return (
 
-     <div style={{ height: '100%' }}>
+     <div style={{ height: '100%',overflow:'hidden'  }}>
       <div className='row-v'>
         <div className={'column'}>
         <div className='remote-container'>

@@ -15,46 +15,44 @@ export default function ExpertInfo() {
   }
 
   return (
-    <div style={{ padding: '2%' }}>
+    <div style={{ padding: '3%' }}>
       <h1>HMO Experts</h1>
       <br></br>
-      <article>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vel
-        blanditiis error recusandae amet aperiam provident alias! Molestias
-        rerum, a possimus eveniet excepturi hic suscipit modi itaque pariatur
-        veniam odit. Excepturi, similique! Expedita, nostrum. Dolorum architecto
-        iste molestiae ut, quae ipsam omnis suscipit nisi facere, quos corrupti?
-        Corrupti, tenetur ipsam?Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Est nihil autem sint molestias alias blanditiis
-        placeat rerum suscipit adipisci facere. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Beatae nesciunt sapiente commodi odit.
-        Libero, exercitationem non dicta pariatur perferendis molestiae quo ex
-        doloribus architecto labore explicabo, asperiores tenetur at ipsa dolor
-        ad reprehenderit quaerat sunt? Expedita recusandae, voluptate, earum
-        dolorem nostrum doloribus error odit magni consequuntur quas eveniet
-        tempore rerum rem enim? Quam esse, distinctio nihil alias, quis modi
-        quibusdam temporibus cum perferendis facilis dolor, excepturi nisi
-        magnam! Obcaecati consectetur ad culpa, itaque sunt dicta recusandae
-        eaque officia numquam veritatis quibusdam voluptate ipsum omnis facere,
-        repudiandae dolores! Veritatis dignissimos quisquam veniam autem animi?
-        Dolore facere officiis perferendis incidunt, eligendi placeat!
-      </article>
-      <h3>Perks</h3>
       <article style={{ textAlign: 'left' }}>
-        1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum,
-        placeat!
-        <br></br>
-        2. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae
-        consequatur reiciendis suscipit fuga, vitae repellendus velit aut culpa
-        excepturi ipsa!
-        <br></br>
-        3. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum,
-        placeat!
-        <br></br>
+        Hello there &#128075;,<br></br>
+        Thank you for visiting HMO and we appreciate your interest for becoming a Hear Me Out expert.
+        It seems like you are good at listening to people.<br></br> We are looking for this quality <b>(Good Listener)</b> in our experts.
+        Before we proceed, we would like to share your <b>Responsibilities</b> and <b>Perks</b> that you get after becoming an expert.
       </article>
+      <br></br>
+      <h3 data-toggle='collapse' href="#collapseResponsibility" role="button" aria-expanded="false" aria-controls="collapseResponsibility">View Responsibilities</h3>
+      <article style={{ textAlign: 'left' }} id="collapseResponsibility">
+      <div className="card card-body">
+        1. As an expert you are expected to listen to users problems.<br></br>
+        2. Please keep in mind that, User expect a healthy conversation and he/she expects someone to talk. <br></br> You don't have to give solution or feedback to every question and query.<br></br>
+        3. The main aim behind this platform is to help user to express his/her thoughts.<br></br>
+        4. You are bound to complete the verification (beta) before starting the Expert Journey.<br></br>
+        5. You can't ask personal information to user. Any such action will lead to account suspention.<br></br>
+        <b>(Upcoming features.)</b><br></br>
+        6. Your rating and performance will be calculated based on the facial expressions.<br></br>
+        7. You will know your score after every session. 
+        </div>
+      </article>
+      <br></br>
+      <h3 data-toggle='collapse' href="#collapsePerks" role="button" aria-expanded="false" aria-controls="collapsePerks">View Perks</h3>
+      <div style={{ textAlign: 'left' }} id="collapsePerks">
+        <div className="card card-body">
+        1. Initially the service will be free but once permium plans are active, you will be receiving a fair amount of payment based on your performance.
+        <br></br>
+        2. Other perks will be updated soon.
+        <br></br>
+        <br></br>
+        </div>
+      </div>
       <center>
-        {' '}
-        <p>Sign up to become an expert</p>
+        <br></br>
+        <p>Sign up to become a new expert.</p>
+        <p>Log In if you are a old expert.</p> 
         <br></br>
         <br></br>
         <button

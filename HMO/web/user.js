@@ -5,21 +5,18 @@ const APIuri = '/api/default/'
 async function updateAddressBook() {
     console.log("updateAddressBook");
 
-    //var contactListArray = connectedSession.getContactsArray(),
     var contactListArray = connectedSession.getOnlineContactsArray(), //Get online contacts
         i = 0;
 
-    console.log("contactListArray :", contactListArray);
-
+  
     //Cleaning addressBook list
-//        $("#addressBookDropDown").empty();
-$("#userlist").html=""
+
+    $("#userlist").html=""
 
     var isExpert=false;
 
     for (i = 0; i < contactListArray.length; i += 1) {
         var user = contactListArray[i];
-        console.log("userId :", user.getId());
         //Checking if connectedUser is not current user befire adding in addressBook list
         
         
@@ -44,8 +41,7 @@ $("#userlist").html=""
 function addStreamInDiv(stream, divId, mediaEltId,  muted) {
     
     var streamIsVideo = stream.hasVideo();
-    console.error('addStreamInDiv - hasVideo? ' + streamIsVideo);
-
+ 
     var mediaElt = null,
         divElement = null,
         funcFixIoS = null,
@@ -85,8 +81,6 @@ function addStreamInDiv(stream, divId, mediaEltId,  muted) {
 
     stream.attachToElement(mediaElt);
 
- //   divElement = document.getElementById(divId);
- //   divElement.appendChild(mediaElt);
     promise = mediaElt.play();
 
     if (promise !== undefined) {
@@ -112,7 +106,6 @@ function addStreamInDiv(stream, divId, mediaEltId,  muted) {
 
 function hangupCall(callId) {
     console.log("hangupCall :", callId);
-    $('#hangup-' + callId).remove();
     //Getting call from ApiRTC call lists
     var call = connectedSession.getCall(callId);
     call.hangUp();
@@ -135,7 +128,7 @@ function addHangupButton(callId) {
     document.getElementById('hangup-user').style.display = 'block';
     $("#hangup-user").attr("onclick",'hangupCall(' + callId + ')');
 
-    //$("#hangupButtons").append('<input id="hangup-' + callId + '" class="btn btn-danger" type="button" value="Hangup-' + callId + '" onclick="hangupCall(' + callId + ')" />');
+
 }
 
 
@@ -143,10 +136,9 @@ function setCallListeners(call) {
     call
         .on("localStreamAvailable", function (stream) {
             console.log('localStreamAvailable');
-            //document.getElementById('local-media').remove();
             addStreamInDiv(stream, 'local-container-user', 'local-media-' + stream.getId(), true);
             stream
-                .on("stopped", function () { //When client receives an screenSharing call from another user
+                .on("stopped", function () { 
                     console.error("Stream stopped");
                     $('#local-media-' + stream.getId()).remove();
                 });
@@ -177,16 +169,10 @@ apiRTC.setLogLevel(0);
 
 var connectedSession = null;
 
-    //==============================
-    // CREATE USER AGENT
-    //==============================
     var ua = new apiRTC.UserAgent({
         uri: 'apzkey:a395323c8e1f6cf634a4fa5dd9028b3e'
     });
     
-    //==============================
-    // REGISTER
-    //==============================
     
     var registerInformation = {};
     
@@ -194,17 +180,12 @@ var connectedSession = null;
         // Save session
         connectedSession = session;
     
-        // Display user number
-//        document.getElementById('my-number').innerHTML = 'Your number is ' + connectedSession.id;
     
         connectedSession
             .on("contactListUpdate", function (updatedContacts) { //display a list of connected users
                 console.log("MAIN - contactListUpdate", updatedContacts);
                 updateAddressBook();
             })
-            //==============================
-            // WHEN A CONTACT CALLS ME
-            //==============================
             .on('incomingCall', function (invitation) {
                 console.log("MAIN - incomingCall : ");
                 //==============================

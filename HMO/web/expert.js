@@ -46,8 +46,6 @@ function addStreamInDiv(stream, divId, mediaEltId, muted) {
 
     stream.attachToElement(mediaElt);
 
-//    divElement = document.getElementById(divId);
-//    divElement.appendChild(mediaElt);
     promise = mediaElt.play();
 
     if (promise !== undefined) {
@@ -72,7 +70,6 @@ function addStreamInDiv(stream, divId, mediaEltId, muted) {
 }
 
 function hangupCall(callId) {
-    console.log("hangupCall :", callId);
     $('#hangup-' + callId).remove();
     //Getting call from ApiRTC call lists
     var call = connectedSession.getCall(callId);
@@ -97,17 +94,15 @@ function addHangupButton(callId) {
        
     $("#hangup-expert").attr("onclick","hangupCall("+ callId + ")");
 
-    //$("#hangupButtons").append('<input id="hangup-' + callId + '" class="btn btn-danger" type="button" value="Hangup-' + callId + '" onclick="hangupCall(' + callId + ')" />');
 }
 
 function setCallListeners(call) {
     call
         .on("localStreamAvailable", function (stream) {
             console.log('localStreamAvailable');
-            //document.getElementById('local-media').remove();
             addStreamInDiv(stream, 'local-container-expert', 'local-media-' + stream.getId(), true);
             stream
-                .on("stopped", function () { //When client receives an screenSharing call from another user
+                .on("stopped", function () { 
                     console.error("Stream stopped");
                                     });
         })
@@ -140,16 +135,10 @@ apiRTC.setLogLevel(0);
 
 var connectedSession = null;
 
-    //==============================
-    // CREATE USER AGENT
-    //==============================
     var ua = new apiRTC.UserAgent({
         uri: 'apzkey:a395323c8e1f6cf634a4fa5dd9028b3e'
     });
     
-    //==============================
-    // REGISTER
-    //==============================
     var registerInformation = {};
     
     ua.register(registerInformation).then(function (session) {
@@ -157,17 +146,11 @@ var connectedSession = null;
          connectedSession = session;
         
         connectedSession
-            //==============================
-            // WHEN A CONTACT CALLS ME
-            //==============================
             .on('incomingCall', function (invitation) {
                 console.log("MAIN - incomingCall : ");
-                //==============================
-                // ACCEPT CALL INVITATION
-                //==============================
-                if(invitation.getCallType()=='audio'){ //When receiving an audio call 
+                if(invitation.getCallType()=='audio'){  
                     var answerOptions = {
-                        mediaTypeForIncomingCall : 'AUDIO' //Answering with audio only.
+                        mediaTypeForIncomingCall : 'AUDIO' 
                     }
                     invitation.accept(null, answerOptions)
                         .then(function (call) {
@@ -175,7 +158,7 @@ var connectedSession = null;
                             addHangupButton(call.getId());
                         });
                 } else { 
-                    invitation.accept() //Answering with audio and video.
+                    invitation.accept() 
                     .then(function (call) {
                         setCallListeners(call);
                         addHangupButton(call.getId());
