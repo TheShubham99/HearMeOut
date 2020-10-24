@@ -40,7 +40,7 @@ export function Navbar() {
           We choose our experts carefully. <br></br><br></br>
           The Experts are some really kind hearted people who are there  
           to listen to your stories, without any judgements. <br></br><br></br>
-          Every expert posses a common quality and that is they are a <b>Good Listener</b>.
+          We connect you with the experts who are <b>Good Listeners </b>.
           </p>
         </ModalBody>
         <ModalFooter>

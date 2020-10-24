@@ -169,6 +169,16 @@ body {
   border-radius: 50px;
 }
 
+.infoBtn {
+  outline: none !important;
+  margin: 1em;
+  background-color: #00ffc4;
+  color: black;
+  padding: 0.6em;
+  border-radius: 1em;
+  box-shadow: 4px 6px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
 .letsGobtn {
   outline: none !important;
   font-family: 'Nunito';
@@ -396,5 +406,12 @@ body {
   }
   .logo {
     max-width: 15.35rem;
+  }
+}
+
+/* Mobiles */
+@media only screen and (max-width: 600px) {
+  .backgroundImg {
+    display: none;
   }
 }

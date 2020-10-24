@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import ModalBody from 'react-bootstrap/ModalBody';
 import ModalHeader from 'react-bootstrap/ModalHeader';
 import ModalTitle from 'react-bootstrap/ModalTitle';
+import ModalFooter from 'react-bootstrap/ModalFooter';
 
 const SignUp = ({ history, show, toggle }) => {
   const handleSignUp = useCallback(
@@ -58,6 +59,9 @@ const SignUp = ({ history, show, toggle }) => {
             </button>
           </form>
         </ModalBody>
+        <ModalFooter>
+          <p style={{color:'red'}}><b>Note</b> - By signing up you are bound follow the responsibilities and privacy guidelines.</p>
+        </ModalFooter>
       </Modal>
     </>
   );
