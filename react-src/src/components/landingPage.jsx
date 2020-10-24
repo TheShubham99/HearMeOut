@@ -61,6 +61,11 @@ export default function LandingPage() {
                   Expert.
                 </button>
               </p>
+              <b>    
+              <p style={{fontSize:'smaller'}}>
+                Know more about the HMO platform by clicking on About in the top right corner.
+              </p>
+              </b>
             </center>
           </div>
           <div>

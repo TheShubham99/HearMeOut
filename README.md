@@ -21,7 +21,7 @@
 
 <h2 align="center" id="about">About The Project</h2>
 
-Hear Me Out is a platform where you can share your thoughts with experts. We choose our expertd carefully. The Experts are some really kind hearted people who are there to listen to your stories, without any judgements. Every expert posses a common quality and that is they are a **Good Listener**.
+Hear Me Out is a platform where you can share your thoughts with experts. We choose our experts carefully. The Experts are some really kind hearted people who are there to listen to your stories, without any judgements. Every expert posses a common quality and that is they are a **Good Listener**.
 
 ---
 
@@ -91,3 +91,7 @@ Once you setup the Nimbella project and react frontend, Try running following co
 3. In `HMO` directory run `nim project watch HMO`.
 
 ---
+
+<h2 align="center">Note - <b>Firebase is used for authentication, follow the following tutorial and paste your firebase keys in .env file.</b></h2>
+
+[Firebase Docs]("https://firebase.google.com/docs/auth/web/start")

@@ -35,9 +35,13 @@ export function Navbar() {
           <ModalTitle>About: Hear Me Out!</ModalTitle>
         </ModalHeader>
         <ModalBody>
-          <div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam dolorum molestias consequuntur nihil illum ea animi modi rerum! Laudantium ullam possimus eum, veritatis ipsam ex debitis veniam nihil fuga sunt ab accusantium itaque voluptate consequuntur. Qui aperiam doloribus dolor temporibus et, earum laudantium ducimus officiis culpa veritatis exercitationem quas? Libero!
-          </div>
+          <p>
+          Hear Me Out is a platform where you can share your thoughts with experts. 
+          We choose our experts carefully. <br></br><br></br>
+          The Experts are some really kind hearted people who are there  
+          to listen to your stories, without any judgements. <br></br><br></br>
+          Every expert posses a common quality and that is they are a <b>Good Listener</b>.
+          </p>
         </ModalBody>
         <ModalFooter>
           <button className={'btn-danger'} onClick={toggle}>Close</button> 
