@@ -31,7 +31,7 @@ The HMO platform is made for people to talk out the experiences, thoughts, and e
 
 > "Sometimes we don't need a solution but we need someone to hear us out."
 
-This is where **'Hear Us Out'** will help you.
+This is where **'Hear Me Out'** will help you.
 
 ---
 

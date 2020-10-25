@@ -29,7 +29,9 @@ export default function AgeGroup() {
       <div
         className='split right fade-in-to-top'
         id='super-young'
-        onClick={() => setAgeGroup('super-young')}
+        onClick={() => {setAgeGroup('super-young')
+        document.location+='/Talk'
+        }}
       >
         <div
           className='centered'
