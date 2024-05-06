@@ -15,10 +15,6 @@
 
 ---
 
-> **For hackathon hosted at - https://ssahasra-rou5e5ge1fw-apigcp.nimbella.io/**
-
----
-
 <h2 align="center" id="about">About The Project</h2>
 
 Hear Me Out is a platform where you can share your thoughts with experts. We choose our experts carefully. The Experts are some really kind-hearted people who are there to listen to your stories without any judgments. Every expert posses a common quality and that is they are **Good Listener**.
