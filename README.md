@@ -2,7 +2,10 @@
 <h4 align="center"><b>There is someone to listen, understand and help you.</b></h4>
 
 [![status](https://img.shields.io/badge/status-pre--alpha-red.svg)](https://github.com/TheShubham99/HearMeOut)
+[![status](https://img.shields.io/badge/maintenance%20status-deprecated-red)](https://github.com/TheShubham99/HearMeOut)
 [![GitHub issues](https://img.shields.io/github/issues/MovingBlocks/AdventureSite.svg)](https://github.com/TheShubham99/HearMeOut/issues/)
+
+
 
 ---
 
@@ -58,7 +61,7 @@ Setup Commands -
 Use yarn of npm.
 
 run `yarn` or `npm install` in the react-src directory.
-Create a Nimbella acount and then a nim Project by following this helpful [tutorial](https://apigcp.nimbella.io/downloads/nim/nim.html).
+Create a Nimbella acount and then a nim Project.
 
 ---
 
@@ -70,8 +73,6 @@ Once you setup the Nimbella project and react frontend, Try running following co
 2. In `react-src` Directory run `yarn start` to run a local server.
 
 **To Test the front-end and API follow the following steps.**
-
-> **For hackathon hosted at - https://ssahasra-rou5e5ge1fw-apigcp.nimbella.io/**
 
 ## To build and test -
 
